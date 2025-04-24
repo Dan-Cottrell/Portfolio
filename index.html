@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Portfolio</title>
+  <!-- Rajdhani Font (DIN-like) -->
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Link to your CSS file -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <div class="white-box">
+      <h1>Hi, I'm Dan.</h1>
+      <h2>Welcome to my portfolio</h2>
+      <p>I build clean, insightful data reports and dashboards using tools like Power BI, SQL, and Excel.<p> 
+      <p>I'm using this website as a way to document my development. Any data used within these pages are fictitious, any resemblence is purely coincidental unless I have stated the source. </p>
+    </div>
+    
+<div class="white-box">
+  <h2>🎨 Dashboard Branding</h2>
+  <p>This is the colour I have chosen for the banner on my dashboard:</p>
+  <img src="Banner Navy.png" alt="Dashboard banner colour" class="color-swatch">
+  <p>To keep a consistent theme in my portfolio, I will be using this thoughout my dashboard designs.</p>
+  <p>Additionally, I will be using icons from the creator <a href="https://www.flaticon.com/authors/smashicons" target="_blank"> Smashicons</a>, please have a look at their page if you find any you like! </p>
+</div>
+
+    <h2>📊 Projects</h2>
+
+<div class="white-box">
+  <h2>📷 Dashboard Preview</h2>
+  <div class="carousel">
+    <button class="carousel-btn prev">&#10094;</button>
+    <img src="Homepage.png" class="carousel-image active" alt="Dashboard Tab 1">
+    <img src="EL-East_Midlands.png" class="carousel-image" alt="Dashboard Tab 2">
+    <img src="EL-England_and_Wales.png" class="carousel-image" alt="Dashboard Tab 3">
+    <img src="QDI.png" class="carousel-image" alt="Dashboard Tab 4">
+    <img src="RF-East_Midlands.png" class="carousel-image" alt="Dashboard Tab 5">
+    <img src="RF-England_and_Wales.png" class="carousel-image" alt="Dashboard Tab 6">
+    <button class="carousel-btn next">&#10095;</button>
+  </div>
+</div>
+  
+    <div class="project">
+      <h3>Sales Dashboard</h3>
+      <p>An interactive Power BI dashboard for visualizing regional and product sales performance over time.</p>
+      <a href="https://your-dashboard-link.com" target="_blank">View Report</a>
+    </div>
+
+    <div class="project">
+      <h3>Marketing Insights Report</h3>
+      <p>Data-driven report analyzing marketing campaign ROI using SQL and Excel, delivered in PDF format.</p>
+      <a href="https://link-to-report.com" target="_blank">View Report</a>
+    </div>
+
+    <div class="project">
+      <h3>Customer Retention Tracker</h3>
+      <p>A Tableau dashboard highlighting customer churn patterns and retention KPIs for a SaaS company.</p>
+      <a href="https://link-to-retention-dashboard.com" target="_blank">View Report</a>
+    </div>
+
+    <h2>📬 Contact</h2>
+
+    <div class="white-box">
+      <p>Email me at: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+      <p>Connect on LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">yourprofile</a></p>
+    </div>
+
+  </div>
+
+  <footer>
+    Dan Cottrell — GitHub Pages
+  </footer>
+
+
+    
+<script>
+  const images = document.querySelectorAll('.carousel-image');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  let current = 0;
+
+  function showImage(index) {
+    images.forEach((img, i) => {
+      img.classList.toggle('active', i === index);
+    });
+  }
+
+  prevBtn.addEventListener('click', () => {
+    current = (current - 1 + images.length) % images.length;
+    showImage(current);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    current = (current + 1) % images.length;
+    showImage(current);
+  });
+
+  showImage(current);
+</script>
+
+
+
+</body>
+</html>
